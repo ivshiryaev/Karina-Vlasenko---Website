@@ -1,6 +1,9 @@
-body{
-	background-color: red;
-	p{
-		font-size:30px;
-	}
+
+
+$primary:red;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+*{
 }
+
