@@ -10769,5 +10769,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  padding: 0px;
+  margin: 0px;
+}
 
 /*# sourceMappingURL=style.css.map */
