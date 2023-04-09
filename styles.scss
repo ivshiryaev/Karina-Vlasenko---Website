@@ -1,9 +1,263 @@
-$primary:red;
+$primary:#1C5557;
+$secondary:#66D9BC;
+$third-color:#348c76;
+$back-color:#173f35;
+
+
+
+$h1:50px;
+$h2:40px;
+$h3:30px;
+$h4:24px;
+$h5:20px;
+$h6:16px;
+
+
+
+$startAnimation:0.2s;
+$releaseAnimation:0.5s;
+
+
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+
 
 *{
 	padding: 0px;
 	margin: 0px;
 }
 
+body{
+	background-color: $back-color;
+	color:white;
+}
+
+
+
+h1{
+	font-size:$h1;
+}
+h2{
+	font-size:$h2;
+	margin-bottom: 20px;
+}
+h4{
+	font-size:$h4;
+}
+section{
+	padding: 50px 0px;
+
+	border:1px dotted $third-color;
+}
+
+
+
+.btn{
+	font-size: $h6;
+	background-color: $third-color;
+	color:white;
+}
+.btn:hover{
+	background-color: $secondary;
+}
+
+
+
+#header{
+
+	width:100%;
+	z-index: 100;
+
+	padding: 20px 0px;
+	background-color: $third-color;
+
+	transition:all $releaseAnimation;
+
+	h4{
+		padding:0px;
+		margin:0px;
+
+		transition:all $releaseAnimation;
+
+		cursor: pointer;
+	}
+	.col{
+		display:flex;
+		justify-content: space-between;
+		align-items:center;
+	}
+	ul{
+		padding: 0px;
+		margin:0px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+
+		list-style-type: none;
+	}
+	li{
+		padding:0px;
+		margin: 0px 10px;
+	}
+	a{
+		text-decoration:none;
+		color:inherit;
+
+		font-size:20px;
+		transition:all $releaseAnimation;
+
+		position: relative;
+	}
+	span:after{
+		opacity: 1;
+		position: absolute;
+
+		transform:scaleX(0);
+
+		width:100%;
+
+		content:"";
+		background-color:white;
+		
+		bottom:-3px;
+		left:0px;
+
+		height:3px;
+
+		border-radius: 15px;
+
+		transition: all $releaseAnimation;
+
+		pointer-events: none;
+	}
+
+	a:hover span:after{
+		opacity: 1;
+
+		transform:scaleX(1);
+
+		width:100%;
+
+		transition: all $startAnimation;
+	}
+
+	h4:hover,a:hover{
+		text-shadow: 0px 0px 20px $secondary;
+		transition: all $startAnimation;
+	}
+}
+
+#hero{
+}
+
+#zaprosy{
+	text-align: center;
+	font-size: $h4;
+
+	.row{
+		gap:0px;
+		margin-bottom:10px;
+	}
+	.row:last-child{
+		margin-bottom:0px;
+	}
+
+	.zapros{
+		text-align:center;
+
+		margin:5px 0px;
+		padding:10px 10px;
+
+		border:1px solid $secondary;
+		border-radius: 15px;
+
+		/*UNSELECTABLE - made for not interrupting animation*/
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+
+		p{
+			margin:0px;
+			padding: 0px;
+		}
+
+		transition: all calc($releaseAnimation*2);
+	}
+	.zapros:hover{
+		transform:scale(1.1);
+		transform:translateY(-10px);
+		box-shadow: 0px 0px 20px $secondary;
+		transition: all $startAnimation;
+
+		cursor:pointer;
+	}
+	.zapros:active{
+		transform:translate(0px);
+		box-shadow:none;
+	}
+}
+
+#services{
+	text-align: center;
+
+	.card{
+		margin: 20px 0px;
+
+		background-color: rgba(0, 0, 0, 0);
+
+		border:1px solid $secondary;
+
+		.price{
+			font-size:$h2;
+			margin-bottom: 10px;
+		}
+		.card-title{
+			font-size:$h4;
+			color:$secondary;
+		}
+		.btn{
+			width:100%;
+		}
+
+		transition: all calc($releaseAnimation * 2);
+
+		cursor:pointer;
+	}
+	.card:hover{
+		box-shadow: 0px 0px 20px $secondary;
+		transform:translateY(-10px);
+
+		transition: all $startAnimation;
+	}
+}
+
+#contact{
+}
+
+#footer{
+	text-align: center;
+
+	width:100%;
+	z-index: 100;
+
+	padding: 10px 0px;
+	margin:0px;
+
+	background-color: $third-color;
+
+	.col{
+		display:flex;
+		flex-direction:column;
+		justify-content: center;
+		align-items:center;
+	}
+	p{
+		padding: 0px;
+		margin:0px;
+	}
+}
