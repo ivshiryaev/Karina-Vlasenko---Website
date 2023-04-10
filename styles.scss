@@ -26,6 +26,8 @@ $releaseAnimation:0.5s;
 *{
 	padding: 0px;
 	margin: 0px;
+
+	font-family: "Shantell sans",sans-serif;
 }
 
 body{
@@ -48,18 +50,28 @@ h4{
 section{
 	padding: 50px 0px;
 
+	/*
 	border:1px dotted $third-color;
+	*/
 }
 
 
 
 .btn{
 	font-size: $h6;
-	background-color: $third-color;
 	color:white;
+
+	a{
+		text-decoration: none;
+		color:white;
+	}
 }
 .btn:hover{
 	background-color: $secondary;
+	box-shadow: 0px 0px 20px $third-color;
+}
+.btn-primary{
+	background-color: $third-color;
 }
 
 
@@ -214,14 +226,23 @@ section{
 
 		.price{
 			font-size:$h2;
-			margin-bottom: 10px;
+			margin-bottom:10px;
 		}
 		.card-title{
 			font-size:$h4;
+			margin-bottom: 20px;
 			color:$secondary;
+		}
+		p{
+			margin-bottom: 20px;
 		}
 		.btn{
 			width:100%;
+			margin-bottom: 10px;
+		}
+		span{
+			opacity: 0.5;
+			font-size:calc($h6 * 0.8);
 		}
 
 		transition: all calc($releaseAnimation * 2);
@@ -234,9 +255,88 @@ section{
 
 		transition: all $startAnimation;
 	}
+	.card:active{
+		transform:translateY(0px);
+		box-shadow: none;
+	}
+}
+
+#information{
+
+	text-align:center;
+
+	h2{
+		text-align:center;
+	}
+	h4{
+		text-align: center;
+		margin-bottom:20px;
+	}
+	p{
+		margin:0px;
+	}
+	.block{
+		margin:20px 0px;
+		padding:20px 0px;
+		border:1px solid $third-color;
+		border-radius: 15px;
+	}
+	.method{
+		margin: 20px 20px;
+		margin-bottom: 20px;
+		padding:20px 0px;
+		border-top:1px solid $primary;
+		border-bottom: 1px solid $primary;
+	}
+	.method:hover{
+
+	}
+}
+
+#guide{
+	text-align: center;
+
+	h2{
+		text-align: center;
+	}
+	.col-sm{
+
+	}
+	.btn{
+		width:100%;
+	}
 }
 
 #contact{
+	.col-md{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin-bottom: 40px;
+	}
+
+	#phoneNumber{
+		cursor: pointer;
+	}
+	#gmail{
+		cursor: pointer;
+	}
+	.iconGroup{
+		margin-bottom:20px;
+
+		font-size:$h1;
+		color:$third-color;
+
+		i{
+			transition: $releaseAnimation;
+		}
+		i:hover{
+			cursor:pointer;
+			color:white;
+			transition: $startAnimation;
+		}
+	}
 }
 
 #footer{

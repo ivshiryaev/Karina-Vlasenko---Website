@@ -10772,6 +10772,7 @@ textarea.form-control-lg {
 * {
   padding: 0px;
   margin: 0px;
+  font-family: "Shantell sans", sans-serif;
 }
 
 body {
@@ -10794,17 +10795,27 @@ h4, .h4 {
 
 section {
   padding: 50px 0px;
-  border: 1px dotted #348c76;
+  /*
+  border:1px dotted $third-color;
+  */
 }
 
 .btn {
   font-size: 16px;
-  background-color: #348c76;
+  color: white;
+}
+.btn a {
+  text-decoration: none;
   color: white;
 }
 
 .btn:hover {
   background-color: #66D9BC;
+  box-shadow: 0px 0px 20px #348c76;
+}
+
+.btn-primary {
+  background-color: #348c76;
 }
 
 #header {
@@ -10927,15 +10938,90 @@ section {
 }
 #services .card .card-title {
   font-size: 24px;
+  margin-bottom: 20px;
   color: #66D9BC;
+}
+#services .card p {
+  margin-bottom: 20px;
 }
 #services .card .btn {
   width: 100%;
+  margin-bottom: 10px;
+}
+#services .card span {
+  opacity: 0.5;
+  font-size: 12.8px;
 }
 #services .card:hover {
   box-shadow: 0px 0px 20px #66D9BC;
   transform: translateY(-10px);
   transition: all 0.2s;
+}
+#services .card:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+#information {
+  text-align: center;
+}
+#information h2, #information .h2 {
+  text-align: center;
+}
+#information h4, #information .h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#information p {
+  margin: 0px;
+}
+#information .block {
+  margin: 20px 0px;
+  padding: 20px 0px;
+  border: 1px solid #348c76;
+  border-radius: 15px;
+}
+#information .method {
+  margin: 20px 20px;
+  margin-bottom: 20px;
+  padding: 20px 0px;
+  border-top: 1px solid #1C5557;
+  border-bottom: 1px solid #1C5557;
+}
+#guide {
+  text-align: center;
+}
+#guide h2, #guide .h2 {
+  text-align: center;
+}
+#guide .btn {
+  width: 100%;
+}
+
+#contact .col-md {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+#contact #phoneNumber {
+  cursor: pointer;
+}
+#contact #gmail {
+  cursor: pointer;
+}
+#contact .iconGroup {
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #348c76;
+}
+#contact .iconGroup i {
+  transition: 0.5s;
+}
+#contact .iconGroup i:hover {
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
 }
 
 #footer {
