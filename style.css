@@ -10880,6 +10880,14 @@ section {
   transition: all 0.2s;
 }
 
+#hero {
+  height: 500px;
+  overflow: hidden;
+}
+#hero .myImage {
+  height: 500px;
+}
+
 #zaprosy {
   text-align: center;
   font-size: 24px;
@@ -10922,6 +10930,19 @@ section {
   box-shadow: none;
 }
 
+#information h2, #information .h2 {
+  margin-bottom: 40px;
+}
+#information h4, #information .h4 {
+  margin-bottom: 20px;
+}
+#information p {
+  margin: 0px;
+}
+#information .myParagraph {
+  margin-bottom: 40px;
+}
+
 #services {
   text-align: center;
 }
@@ -10962,32 +10983,16 @@ section {
   box-shadow: none;
 }
 
-#information {
-  text-align: center;
+#myGoal h2, #myGoal .h2 {
+  margin-bottom: 40px;
 }
-#information h2, #information .h2 {
-  text-align: center;
-}
-#information h4, #information .h4 {
-  text-align: center;
+#myGoal h4, #myGoal .h4 {
   margin-bottom: 20px;
 }
-#information p {
-  margin: 0px;
+#myGoal .myParagraph {
+  margin-bottom: 40px;
 }
-#information .block {
-  margin: 20px 0px;
-  padding: 20px 0px;
-  border: 1px solid #348c76;
-  border-radius: 15px;
-}
-#information .method {
-  margin: 20px 20px;
-  margin-bottom: 20px;
-  padding: 20px 0px;
-  border-top: 1px solid #1C5557;
-  border-bottom: 1px solid #1C5557;
-}
+
 #guide {
   text-align: center;
 }
@@ -11004,11 +11009,23 @@ section {
   justify-content: center;
   margin-bottom: 40px;
 }
+#contact h4, #contact .h4 {
+  display: inline;
+  float: left;
+}
 #contact #phoneNumber {
+  transition: all 0.5s;
   cursor: pointer;
+}
+#contact #phoneNumber:hover {
+  transition: all 0.2s;
+  color: #66D9BC;
 }
 #contact #gmail {
   cursor: pointer;
+}
+#contact #gmail:hover {
+  color: #66D9BC;
 }
 #contact .iconGroup {
   margin-bottom: 20px;

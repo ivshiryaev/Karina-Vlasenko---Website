@@ -1,0 +1,29 @@
+1. Responsive 
+{
+	text-align:center on #contact section
+	order of image and content on hero section
+
+	#information section
+	#sidebar for mobile devices
+}
+
+2. Add images
+{
+	Hero, about me
+}
+
+3. JS - form data 
+{
+	copy gmail
+	copy phoneNumber
+}
+
+4. Add animation and back loops images
+{
+	fadeIn animation
+}
+
+5.Additional
+{
+	Colors.
+}
