@@ -50,9 +50,15 @@ h4{
 section{
 	padding: 50px 0px;
 
-	/*
-	border:1px dotted $third-color;
-	*/
+	.row > div{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.myImageHolder{
+		align-items: center;
+	}
 }
 
 
@@ -77,6 +83,9 @@ section{
 
 
 #header{
+	.row >div{
+		flex-direction: row;
+	}
 
 	width:100%;
 	z-index: 100;
@@ -162,10 +171,17 @@ section{
 }
 
 #hero{
-	height:500px;
-	overflow: hidden;
+	min-height: calc(300px + 15rem);
+
+	/* Photo on mobiles should be first*/
+	.row > div:last-child{
+		align-items: center;
+		order:-1;
+	}
+
 	.myImage{
-		height:500px;
+		max-width:100%;
+		height:auto;
 	}
 }
 
@@ -372,5 +388,19 @@ section{
 	p{
 		padding: 0px;
 		margin:0px;
+	}
+}
+
+
+
+/*------Media queries-------*/
+
+
+
+@include media-breakpoint-up(lg) {
+	#hero{
+		.row > div:last-child{
+		order:2;
+	}
 	}
 }

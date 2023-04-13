@@ -10795,9 +10795,14 @@ h4, .h4 {
 
 section {
   padding: 50px 0px;
-  /*
-  border:1px dotted $third-color;
-  */
+}
+section .row > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .myImageHolder {
+  align-items: center;
 }
 
 .btn {
@@ -10824,6 +10829,9 @@ section {
   padding: 20px 0px;
   background-color: #348c76;
   transition: all 0.5s;
+}
+#header .row > div {
+  flex-direction: row;
 }
 #header h4, #header .h4 {
   padding: 0px;
@@ -10881,11 +10889,16 @@ section {
 }
 
 #hero {
-  height: 500px;
-  overflow: hidden;
+  min-height: calc(300px + 15rem);
+  /* Photo on mobiles should be first*/
+}
+#hero .row > div:last-child {
+  align-items: center;
+  order: -1;
 }
 #hero .myImage {
-  height: 500px;
+  max-width: 100%;
+  height: auto;
 }
 
 #zaprosy {
@@ -11058,6 +11071,13 @@ section {
 #footer p {
   padding: 0px;
   margin: 0px;
+}
+
+/*------Media queries-------*/
+@media (min-width: 992px) {
+  #hero .row > div:last-child {
+    order: 2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
