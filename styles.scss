@@ -172,17 +172,6 @@ section{
 
 #hero{
 	min-height: calc(300px + 15rem);
-
-	/* Photo on mobiles should be first*/
-	.row > div:last-child{
-		align-items: center;
-		order:-1;
-	}
-
-	.myImage{
-		max-width:100%;
-		height:auto;
-	}
 }
 
 #zaprosy{
@@ -397,10 +386,41 @@ section{
 
 
 
-@include media-breakpoint-up(lg) {
+//standard values for 0px screen
+section{
+	text-align: center;
+}
+
+#header{
+	display:none;
+}
+
+
+
+//change if bigger than 
+@include media-breakpoint-up(sm) {
+
+}
+
+
+@include media-breakpoint-up(md) {
+	section{
+		text-align: start;
+	}
+
+	#header{
+		display: block;
+	}
 	#hero{
+		text-align: start;
+
 		.row > div:last-child{
-		order:2;
+		//photo has to be on the right side
+		}
 	}
-	}
+}
+
+//If screen is bigger than ($value) do something
+@include media-breakpoint-up(lg) {
+	
 }

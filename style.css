@@ -10890,15 +10890,6 @@ section .myImageHolder {
 
 #hero {
   min-height: calc(300px + 15rem);
-  /* Photo on mobiles should be first*/
-}
-#hero .row > div:last-child {
-  align-items: center;
-  order: -1;
-}
-#hero .myImage {
-  max-width: 100%;
-  height: auto;
 }
 
 #zaprosy {
@@ -11074,9 +11065,23 @@ section .myImageHolder {
 }
 
 /*------Media queries-------*/
-@media (min-width: 992px) {
-  #hero .row > div:last-child {
-    order: 2;
+section {
+  text-align: center;
+}
+
+#header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  section {
+    text-align: start;
+  }
+  #header {
+    display: block;
+  }
+  #hero {
+    text-align: start;
   }
 }
 
