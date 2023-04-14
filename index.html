@@ -12,12 +12,49 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Testing</title>
+	<title>Карина Власенко. Телесный психолог</title>
 </head>
 
 
+<!--Data from contact form is send to:
+	https://docs.google.com/spreadsheets/d/1nxQYbo9WXuteGi4D3OX_zrUVjdjfJJyBiISiGaRFvg4/edit?usp=sharing
+-->
+
 
 <body>
+
+<aside>
+	<a class="btn btn-primary" data-bs-toggle="offcanvas"
+	href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+		Link with href
+	</a>
+	<button class="btn btn-primary" type="button"
+	data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+	aria-controls="offcanvasExample">
+		Button with data-bs-target
+	</button>
+<div class="offcanvas.show offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+	<div class="offcanvas-header">
+		<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body">
+		<div>
+			Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+		</div>
+		<div class="dropdown mt-3">
+			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+				Dropdown button
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</aside>
 
 <header>
 <section id="header">
@@ -327,20 +364,24 @@
 				</div>
 			</div>
 		<!--Content-->
-			<div class="row">
-				<div class="col-md">
-					<h2>Будем в контакте ?</h2>
 
-					<div class="iconGroup">
-						<i class="fa-brands fa-telegram"></i>
-						<i class="fa-brands fa-instagram"></i>
+			<!--Info-->
+				<div class="row">
+					<div class="col-md">
+						<h2>Будем в контакте ?</h2>
+
+						<div class="iconGroup">
+							<i class="fa-brands fa-telegram"></i>
+							<i class="fa-brands fa-instagram"></i>
+						</div>
+
+						<h4><span id="phoneNumber">+48500396561</span></h4>
+						<h4><span id="mail">keri.vlasenko@gmail.com</span></h4>
 					</div>
 
-					<h4><span id="phoneNumber">+48500396561</span></h4>
-					<h4><span id="gmail">keri.vlasenko@gmail.com</span></h4>
-				</div>
+			<!--Form-->
 				<div class="col-md">
-					<form>
+					<form method="post" action="https://script.google.com/macros/s/AKfycbyBA6wGSbk9ys5TPoz9yHwgmbceh_KPnRiCjtRIwEWDDDlwAHIGALSre_rcJKbvnk0fTA/exec">
 						<div class="mb-3">
 							<label for="nameInput" class="form-label">Имя</label>
 							<input type="text" name="name"
@@ -348,12 +389,12 @@
 						</div>
 						<div class="mb-3">
 							<label for="emailInput" class="form-label">Email</label>
-							<input type="text" name="email"
+							<input type="email" name="email"
 							class="form-control" id="emailInput" placeholder="testmail@gmail.com">
 						</div>
 						<div class="mb-3">
 							<label for="descriptionInput" class="form-label">Описание...</label>
-							<textarea class="form-control" rows="6" id="descriptionInput"
+							<textarea name="text" class="form-control" rows="6" id="descriptionInput"
 							placeholder="Опишите с каким запросом вы обращаетесь..."></textarea>
 						</div>
 						<div class="mb-3">

@@ -11002,6 +11002,7 @@ section .myImageHolder {
 }
 #guide h2, #guide .h2 {
   text-align: center;
+  margin-bottom: 40px;
 }
 #guide .btn {
   width: 100%;
@@ -11025,10 +11026,10 @@ section .myImageHolder {
   transition: all 0.2s;
   color: #66D9BC;
 }
-#contact #gmail {
+#contact #mail {
   cursor: pointer;
 }
-#contact #gmail:hover {
+#contact #mail:hover {
   color: #66D9BC;
 }
 #contact .iconGroup {

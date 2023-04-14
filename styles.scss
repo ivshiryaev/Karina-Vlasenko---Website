@@ -305,6 +305,7 @@ section{
 
 	h2{
 		text-align: center;
+		margin-bottom: 40px;
 	}
 	.col-sm{
 
@@ -334,10 +335,10 @@ section{
 		transition: all $startAnimation;
 		color:$secondary;
 	}
-	#gmail{
+	#mail{
 		cursor: pointer;
 	}
-	#gmail:hover{
+	#mail:hover{
 		color:$secondary;
 	}
 	.iconGroup{
