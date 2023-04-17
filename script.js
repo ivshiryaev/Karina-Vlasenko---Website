@@ -2,31 +2,73 @@ const mail = document.getElementById('mail');
 const phoneNumber = document.getElementById('phoneNumber');
 
 const sideMenuElement = document.querySelector('.sideMenu');
+const sideMenuBackgroundElement = document.querySelector('.sideMenu .background');
+
 const burgerIconElement = document.getElementById('burgerIcon');
 
 let burgerIconClassName = "fa-bars";
 let closeIconClassName = "fa-xmark";
 
-console.log(sideMenuElement);
-console.log(burgerIconElement);
+//--------Load all the images when open the page-------//
+window.onload = function() {
+	var images = document.getElementsByTagName("img");
+	for (var i = 0; i < images.length; i++) {
+	  images[i].src = images[i].getAttribute("data-src");
+	}
+  }
 
-//toggle open class on sidemenu
-burgerIconElement.addEventListener('click',function(){
-	sideMenuElement.classList.toggle("open");
+
+//---------------------Animation FadeIn--------------------//
+const animationElement = document.querySelectorAll('.animate');
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if(entry.isIntersecting)
+		{
+			entry.target.classList.add('show');
+		}else{
+			entry.target.classList.remove('show');
+		}
+	});
 });
 
-//Change Burger Icon to the XMark ('close') button ;
-burgerIconElement.addEventListener('click', function(){
-	toggleClass(this,burgerIconClassName,closeIconClassName);
+animationElement.forEach((element) => {
+  observer.observe(element);
 });
 
+
+
+//Copy mail
 mail.addEventListener('click',function(){
 	copyToClipboard(this.innerHTML);
 });
 
+//Copy Phone
 phoneNumber.addEventListener('click',function(){
 	copyToClipboard(this.innerHTML);
-})
+});
+
+
+
+//On click burger icon = switchSideMenu()
+burgerIconElement.addEventListener('click',function(){
+	switchSideMenu();
+});
+
+//Click sidemenu background to close sidemenu
+sideMenuBackgroundElement.addEventListener('click',function(){
+	switchSideMenu();
+});
+
+
+function switchSideMenu(){
+	//toggle open class on sidemenu
+	sideMenuElement.classList.toggle("open");
+	//toggle scroll on/off
+	document.querySelector('body').classList.toggle('noScroll');
+	//Switch burger icon
+	toggleClass(burgerIconElement,burgerIconClassName,closeIconClassName);
+}
 
 //If element has class1 , toggle it to class2
 function toggleClass(element,class1,class2){

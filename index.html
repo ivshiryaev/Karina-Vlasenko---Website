@@ -16,7 +16,7 @@
 </head>
 
 
-<!--Data from contact form is send to:
+<!--Data from contact form is sent to:
 	https://docs.google.com/spreadsheets/d/1nxQYbo9WXuteGi4D3OX_zrUVjdjfJJyBiISiGaRFvg4/edit?usp=sharing
 -->
 
@@ -24,24 +24,31 @@
 <body>
 
 
-<div class="burgerButton">
-	<i id="burgerIcon" class="fa-solid fa-bars"></i>
+<div class="progressContainer">
+	<div id="progressBar">
+	</div>
 </div>
 
-<div class="sideMenu">
-	<div class="background">
+<aside id="sideBar">
+	<div class="burgerButton">
+		<i id="burgerIcon" class="fa-solid fa-bars"></i>
 	</div>
 
-	<nav>
-		<a href="#">Link</a>
-		<a href="#">Link</a>
-		<a href="#">Link</a>
-		<a href="#">Link</a>
-	</nav>
-</div>
+	<div class="sideMenu">
+		<div class="background">
+		</div>
+
+		<nav>
+			<a href="#about">Обо мне</a>
+			<a href="#services">Услуги</a>
+			<a href="#zaprosy">Запросы</a>
+			<a href="#contact">Контакт</a>
+		</nav>
+	</div>
+</aside>
 
 <header>
-<section id="header">
+<section id="header" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -60,7 +67,7 @@
 </section>
 </header>
 
-<section id="hero">
+<section id="hero" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -75,17 +82,17 @@
 				</div>
 			</div>
 			<div class="col-md-6 myImageHolder">
-				<img class="img-fluid" src="images/hero.png">
+				<img class="img-fluid" data-src="images/hero.png" alt="HeroPhoto">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="about">
+<section id="about" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col-md myImageHolder">
-				<img src="images/about.png" class="img-fluid"alt="AboutMePhoto">
+				<img data-src="images/about.png" class="img-fluid" alt="AboutMePhoto">
 			</div>
 			<div class="col-md">
 				<h2>Обо мне</h2>
@@ -99,7 +106,7 @@
 	</div>
 </section>
 
-<section id="zaprosy">
+<section id="zaprosy" class="animate">
 	<div class="container">
 		<!--Heading-->
 			<div class="row">
@@ -182,7 +189,7 @@
 	</div>
 </section>
 
-<section id="information">
+<section id="information" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
@@ -198,13 +205,13 @@
 				</div>
 			</div>
 			<div class="col-md myImageHolder">
-				<img src="images/info.png" class="img-fluid" alt="information Photo">
+				<img data-src="images/info.png" class="img-fluid" alt="information Photo">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="services">
+<section id="services" class="animate">
 	<div class="container">
 		<!--Heading-->
 			<div class="row">
@@ -216,7 +223,7 @@
 		<!--Cards-->
 			<div class="row">
 				<!--card-->
-					<div class="col-sm">
+					<div class="col-md">
 						<div class="card">
 							<div class="card-body">
 								<p class="price">50$</p>
@@ -228,7 +235,7 @@
 						</div>
 					</div>
 				<!--card-->
-					<div class="col-sm">
+					<div class="col-md">
 						<div class="card">
 							<div class="card-body">
 								<p class="price">100$</p>
@@ -240,7 +247,7 @@
 						</div>
 					</div>
 				<!--card-->
-					<div class="col-sm">
+					<div class="col-md">
 						<div class="card">
 							<div class="card-body">
 								<p class="price">10$</p>
@@ -255,7 +262,7 @@
 			</div>
 			<div class="row">
 				<!--card-->
-					<div class="col-sm">
+					<div class="col-md">
 						<div class="card">
 							<div class="card-body">
 								<p class="price">10$</p>
@@ -267,7 +274,7 @@
 						</div>
 					</div>
 				<!--card-->
-					<div class="col-sm">
+					<div class="col-md">
 						<div class="card">
 							<div class="card-body">
 								<p class="price">15$</p>
@@ -282,11 +289,11 @@
 	</div>
 </section>
 
-<section id="myGoal">
+<section id="myGoal" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col-md myImageHolder">
-				<img src="images/goal.png" class="img-fluid" alt="myGoal photo">
+				<img data-src="images/goal.png" class="img-fluid" alt="myGoal photo">
 			</div>
 			<div class="col-md">
 				<h2>Моя цель</h2>
@@ -305,7 +312,7 @@
 	</div>
 </section>
 
-<section id="guide">
+<section id="guide" class="animate">
 	<div class="container">
 		<!--Heading-->
 			<div class="row">
@@ -340,7 +347,7 @@
 			</div>
 </section>
 
-<section id="contact">
+<section id="contact" class="animate">
 	<div class="container">
 		<!--Heading-->
 			<div class="row">
@@ -355,8 +362,14 @@
 						<h2>Будем в контакте ?</h2>
 
 						<div class="iconGroup">
+							<a href="https://web.telegram.org/k/#@kerinuts" target="_blank">
 							<i class="fa-brands fa-telegram"></i>
+							</a>
+
+							<a href="https://www.instagram.com/kerinuts/" target="_blank">
 							<i class="fa-brands fa-instagram"></i>
+							</a>
+
 						</div>
 
 						<h4><span id="phoneNumber">+48500396561</span></h4>
@@ -391,7 +404,7 @@
 </section>
 
 <footer>
-<section id="footer">
+<section id="footer" class="animate">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -407,5 +420,7 @@
 </body>
 
 <script src="https://kit.fontawesome.com/07b8758406.js" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="scrollProgress.js"></script>
 </html>
