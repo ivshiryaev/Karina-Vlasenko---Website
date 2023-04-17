@@ -9,14 +9,20 @@ const burgerIconElement = document.getElementById('burgerIcon');
 let burgerIconClassName = "fa-bars";
 let closeIconClassName = "fa-xmark";
 
-//--------Load all the images when open the page-------//
-window.onload = function() {
+
+//------------Remove loading onload------------//
+window.onload = function(){
+
+	//Load all the images
 	var images = document.getElementsByTagName("img");
 	for (var i = 0; i < images.length; i++) {
 	  images[i].src = images[i].getAttribute("data-src");
 	}
-  }
 
+	//Remove loading div
+	document.querySelector('.loaderWrapper').style.display="none";
+
+}
 
 //---------------------Animation FadeIn--------------------//
 const animationElement = document.querySelectorAll('.animate');
