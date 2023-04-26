@@ -33,6 +33,7 @@ $releaseAnimation:0.5s;
 body{
 	background-color: $back-color;
 	color:white;
+	overflow-x:hidden;
 }
 
 
@@ -60,6 +61,7 @@ section{
 		align-items: center;
 	}
 }
+
 
 
 
@@ -174,6 +176,15 @@ section{
 
 
 
+.divider{
+	img{
+		width:100%;
+		height:auto;
+	}
+}
+
+
+
 .loaderWrapper{
 	width:100%;
 	height:100vh;
@@ -189,8 +200,6 @@ section{
 		color:$secondary;
 	}
 }
-
-
 
 #header{
 	.row >div{
@@ -284,6 +293,10 @@ section{
 	min-height: calc(300px + 15rem);
 }
 
+#about{
+	background-color: #227E67;
+}
+
 #zaprosy{
 	text-align: center;
 	font-size: $h4;
@@ -336,6 +349,8 @@ section{
 
 #information{
 
+	background-color: #227E67;
+
 	h2{
 		margin-bottom: 40px;
 	}
@@ -366,6 +381,7 @@ section{
 		.price{
 			font-size:$h2;
 			margin-bottom:10px;
+			color:white;
 		}
 		.card-title{
 			font-size:$h4;
@@ -401,6 +417,8 @@ section{
 }
 
 #myGoal{
+	background-color: #227E67;
+
 	h2{
 		margin-bottom:40px;
 	}
@@ -428,6 +446,8 @@ section{
 }
 
 #contact{
+	background-color: #227E67;
+
 	.col-md{
 		display: flex;
 		flex-direction: column;
@@ -458,7 +478,7 @@ section{
 
 		a{
 			font-size:$h1;
-			color:$third-color;
+			color:$back-color;
 			transition: $releaseAnimation;
 
 			text-decoration: none;
@@ -480,7 +500,6 @@ section{
 	padding: 10px 0px;
 	margin:0px;
 
-	background-color: $third-color;
 
 	.col{
 		display:flex;
@@ -521,11 +540,12 @@ section{
 
 .animate{
 	opacity: 0;
+	transform:scale(1.1);
 	transition: all $startAnimation;
 }
 .show{
 	opacity: 1;
-	transform:translateY(0);
+	transform: scale(1);
 }
 
 @keyframes moveToTop{

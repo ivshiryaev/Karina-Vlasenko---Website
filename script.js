@@ -10,18 +10,36 @@ let burgerIconClassName = "fa-bars";
 let closeIconClassName = "fa-xmark";
 
 
-//------------Remove loading onload------------//
+
+var heroImage = new Image();
+var aboutImage = new Image();
+var informationImage = new Image();
+var myGoalImage = new Image();
+
+heroImage.onload = () => {
+	document.getElementById('heroImage').src = heroImage.src;
+}
+aboutImage.onload = () => {
+	document.getElementById('aboutImage').src = aboutImage.src;
+}
+informationImage.onload = () => {
+	document.getElementById('informationImage').src = informationImage.src;
+}
+myGoalImage.onload = () => {
+	document.getElementById('myGoalImage').src = myGoalImage.src;
+}
+
+heroImage.src = 'images/hero.png';
+aboutImage.src = 'images/about.png';
+informationImage.src = 'images/info.png';
+myGoalImage.src = 'images/goal.png';
+
+
+
+//------------Remove loading div when page is loaded------------//
 window.onload = function(){
-
-	//Load all the images
-	var images = document.getElementsByTagName("img");
-	for (var i = 0; i < images.length; i++) {
-	  images[i].src = images[i].getAttribute("data-src");
-	}
-
 	//Remove loading div
 	document.querySelector('.loaderWrapper').style.display="none";
-
 }
 
 //---------------------Animation FadeIn--------------------//
