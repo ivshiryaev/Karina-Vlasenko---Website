@@ -10772,6 +10772,7 @@ textarea.form-control-lg {
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
   font-family: "Shantell sans", sans-serif;
 }
 
@@ -10809,6 +10810,7 @@ section .myImageHolder {
 .btn {
   font-size: 16px;
   color: white;
+  padding: 10px 20px;
 }
 .btn a {
   text-decoration: none;
@@ -10822,13 +10824,14 @@ section .myImageHolder {
 
 .btn-primary {
   background-color: #348c76;
+  border: none;
 }
 
 .burgerButton {
   display: grid;
   place-items: center;
   font-size: 20px;
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -10915,6 +10918,9 @@ section .myImageHolder {
 .loaderWrapper {
   width: 100%;
   height: 100vh;
+  position: fixed;
+  z-index: 100;
+  background-color: #348c76;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10991,6 +10997,9 @@ section .myImageHolder {
 }
 
 #hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(300px + 15rem);
 }
 
@@ -11136,6 +11145,7 @@ section .myImageHolder {
   color: white;
   transition: all 0.5s;
   cursor: pointer;
+  text-decoration: underline;
 }
 #contact #phoneNumber:hover {
   color: white;
@@ -11143,7 +11153,9 @@ section .myImageHolder {
   color: #66D9BC;
 }
 #contact #mail {
+  color: white;
   cursor: pointer;
+  text-decoration: underline;
 }
 #contact #mail:hover {
   color: #66D9BC;
@@ -11161,6 +11173,12 @@ section .myImageHolder {
   cursor: pointer;
   color: white;
   transition: 0.2s;
+}
+#contact #form {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px 0px rgba(72, 72, 72, 0.2117647059);
 }
 
 #footer {
@@ -11231,6 +11249,10 @@ section {
   display: none;
 }
 
+#hero .row div:first-child {
+  margin-bottom: 50px;
+}
+
 @media (min-width: 768px) {
   section {
     text-align: start;
@@ -11243,6 +11265,9 @@ section {
   }
   #hero {
     text-align: start;
+  }
+  #hero .row div:first-child {
+    margin-bottom: 0px;
   }
 }
 

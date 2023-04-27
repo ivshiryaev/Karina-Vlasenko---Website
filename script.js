@@ -51,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
 		{
 			entry.target.classList.add('show');
 		}else{
-			entry.target.classList.remove('show');
+			// entry.target.classList.remove('show');
 		}
 	});
 });
@@ -64,7 +64,7 @@ animationElement.forEach((element) => {
 
 //Copy mail
 mail.addEventListener('click',function(){
-	copyToClipboard(this.innerHTML);
+	mailTo(this.innerHTML);
 });
 
 //Copy Phone
@@ -112,4 +112,8 @@ function copyToClipboard(data){
 	navigator.clipboard.writeText(data);
 
 	alert(data + "\nСкопировано !");
+}
+
+function mailTo(value){
+	window.location.href = "mailto:" + value;
 }
