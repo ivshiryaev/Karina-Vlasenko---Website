@@ -10895,9 +10895,21 @@ section .myImageHolder {
   overflow: hidden;
 }
 
-.divider img {
+.divider {
+  position: relative;
+  border: none;
+  border-radius: 10px;
+}
+.divider svg {
+  position: relative;
+  top: 2px;
   width: 100%;
   height: auto;
+  shape-rendering: geometricPrecision;
+}
+
+.divider.reverted {
+  transform: scale(1, -1);
 }
 
 .loaderWrapper {
@@ -11121,10 +11133,12 @@ section .myImageHolder {
   float: left;
 }
 #contact #phoneNumber {
+  color: white;
   transition: all 0.5s;
   cursor: pointer;
 }
 #contact #phoneNumber:hover {
+  color: white;
   transition: all 0.2s;
   color: #66D9BC;
 }
@@ -11166,6 +11180,10 @@ section .myImageHolder {
   padding: 0px;
   margin: 0px;
 }
+#footer a {
+  color: white;
+  font-style: italic;
+}
 
 /*----------Progress Scroll-------------*/
 .progressContainer {
@@ -11189,13 +11207,11 @@ section .myImageHolder {
 
 .animate {
   opacity: 0;
-  transform: scale(1.1);
   transition: all 0.2s;
 }
 
 .show {
   opacity: 1;
-  transform: scale(1);
 }
 
 @keyframes moveToTop {

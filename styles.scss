@@ -177,10 +177,21 @@ section{
 
 
 .divider{
-	img{
-		width:100%;
-		height:auto;
+	position: relative;
+	border:none;
+	border-radius:10px;
+
+	svg{
+		position: relative;
+		top: 2px;
+		width: 100%;
+		height: auto;
+		shape-rendering: geometricPrecision;
 	}
+}
+
+.divider.reverted{
+	transform: scale(1,-1);
 }
 
 
@@ -457,10 +468,12 @@ section{
 		float:left;
 	}
 	#phoneNumber{
+		color:white;
 		transition: all $releaseAnimation;
 		cursor: pointer;
 	}
 	#phoneNumber:hover{
+		color:white;
 		transition: all $startAnimation;
 		color:$secondary;
 	}
@@ -508,6 +521,11 @@ section{
 		padding: 0px;
 		margin:0px;
 	}
+	a{
+		color:white;
+		font-style: italic;
+		
+	}
 }
 
 
@@ -537,12 +555,10 @@ section{
 
 .animate{
 	opacity: 0;
-	transform:scale(1.1);
 	transition: all $startAnimation;
 }
 .show{
 	opacity: 1;
-	transform: scale(1);
 }
 
 @keyframes moveToTop{
