@@ -11148,16 +11148,17 @@ section .myImageHolder {
   text-decoration: underline;
 }
 #contact #phoneNumber:hover {
-  color: white;
   transition: all 0.2s;
   color: #66D9BC;
 }
 #contact #mail {
   color: white;
+  transition: all 0.5s;
   cursor: pointer;
   text-decoration: underline;
 }
 #contact #mail:hover {
+  transition: all 0.2s;
   color: #66D9BC;
 }
 #contact .iconGroup {
@@ -11223,12 +11224,21 @@ section .myImageHolder {
   animation: moveToTop 1.5s ease-in-out 0s infinite alternate;
 }
 
-.animate {
+.hidden {
   opacity: 0;
-  transition: all 0.2s;
+  transition: all 1s;
 }
 
 .show {
+  opacity: 1;
+}
+
+.fadeStart {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.fade {
   opacity: 1;
 }
 

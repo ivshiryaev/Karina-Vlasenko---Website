@@ -489,16 +489,17 @@ section{
 
 	}
 	#phoneNumber:hover{
-		color:white;
 		transition: all $startAnimation;
 		color:$secondary;
 	}
 	#mail{
 		color:white;
+		transition: all $releaseAnimation;
 		cursor: pointer;
 		text-decoration: underline;
 	}
 	#mail:hover{
+		transition: all $startAnimation;
 		color:$secondary;
 	}
 	.iconGroup{
@@ -578,12 +579,22 @@ section{
 	animation: moveToTop 1.5s ease-in-out 0s infinite alternate;
 }
 
-.animate{
-	opacity: 0;
-	transition: all $startAnimation;
+.parentAnimate{
+}
+.hidden{
+	opacity:0;
+	transition: all 1s;
 }
 .show{
 	opacity: 1;
+}
+
+.fadeStart{
+	opacity:0;
+	transition: all 2s;
+}
+.fade{
+	opacity:1;
 }
 
 @keyframes moveToTop{

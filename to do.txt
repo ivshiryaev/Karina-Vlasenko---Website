@@ -31,3 +31,29 @@
 {
 	Colors.
 }
+
+
+
+
+
+-------------------------
+
+
+Animation testing
+
+1 idea - add animate class to parent element , then via forEach loop add .show class for all childs
+	1. adding .parentAnimate to parent
+	2. every child will have animations.
+
+		how to handle animations ?
+			every child will have .hidden class at the beginning
+			.show when IntersectionObserver intersect.
+
+		what if i have different types of animations ?
+			every child will have .hidden class at the beginning;
+			when IntersectionObserver intersect element => add (className) to 
+			this element, animation name will be passed via data-animation.
+
+			how to access this data-animation property ?
+				if(element.getAttribute('data-animation') == '')
+

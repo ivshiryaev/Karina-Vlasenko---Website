@@ -38,27 +38,39 @@ myGoalImage.src = 'images/goal.png';
 
 //------------Remove loading div when page is loaded------------//
 window.onload = function(){
-	//Remove loading div
 	document.querySelector('.loaderWrapper').style.display="none";
 }
 
-//---------------------Animation FadeIn--------------------//
-const animationElement = document.querySelectorAll('.animate');
+//---------------------Animation Intersection Observer for Parents--------------------//
+// get all the parentElements
+const parentAnimationElements = document.querySelectorAll('.parentAnimate');
+
+//hide all the childrens in parentElements
+parentAnimationElements.forEach(element =>{
+	console.log(element);
+	Array.from(element.children).forEach(child => child.classList.add('hidden'));
+});
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {
+
 		if(entry.isIntersecting)
 		{
-			entry.target.classList.add('show');
-		}else{
+			Array.from(entry.target.children).forEach(child => {
+				if(child.hasAttribute('data-animation')){
+					child.classList.add(child.getAttribute('data-animation'));
+				}
+			});
+
+			// entry.target.classList.add('show');
+		}
+		else{
 			// entry.target.classList.remove('show');
 		}
 	});
 });
 
-animationElement.forEach((element) => {
-  observer.observe(element);
-});
+parentAnimationElements.forEach(element => observer.observe(element));
 
 
 
