@@ -9,6 +9,33 @@ const burgerIconElement = document.getElementById('burgerIcon');
 let burgerIconClassName = "fa-bars";
 let closeIconClassName = "fa-xmark";
 
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent the form from submitting normally
+
+	  let form = event.target;
+	  let formData = new FormData(form);
+
+    // perform the AJAX request
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // show a success message
+        alert('Спасибо что обратились ко мне. Отвечу вам как можно скорее :)');
+      } else {
+        // show an error message
+        alert('Error: ' + xhr.statusText);
+      }
+    };
+    xhr.onerror = function() {
+      // show an error message
+      alert('Error: ' + xhr.statusText);
+    };
+    xhr.send(new FormData(form));
+});
+
 
 
 var heroImage = new Image();
