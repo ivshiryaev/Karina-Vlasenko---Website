@@ -24,7 +24,7 @@ form.addEventListener('submit', function(e) {
       if (xhr.status === 200) {
         // show a success message
         alert('Спасибо что обратились ко мне. Отвечу вам как можно скорее :)');
-        
+
       } else {
         // show an error message
         alert('Error: ' + xhr.statusText);
@@ -35,6 +35,8 @@ form.addEventListener('submit', function(e) {
       alert('Error: ' + xhr.statusText);
     };
     xhr.send(new FormData(form));
+
+    form.reset();
 });
 
 
