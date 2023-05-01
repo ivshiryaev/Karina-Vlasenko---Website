@@ -421,7 +421,8 @@
 		<!--Guide-->
 			<div class="row">
 				<div class="col-sm">
-					<a href="download/CheckList.pdf" download="CheckList" target="_blank">
+					<a href="download/CheckList.pdf" download="CheckList" type="application/pdf"
+					target="_blank" rel="noopener noreferrer">
 					<button class="btn btn-primary"><i class="fa-solid fa-download"></i> Скачать</button>
 					</a>
 				</div>
@@ -469,17 +470,17 @@
 						<div class="mb-3">
 							<label for="nameInput" class="form-label">Имя</label>
 							<input type="text" name="name"
-							class="form-control" id="nameInput" placeholder="Ваше имя...">
+							class="form-control" id="nameInput" placeholder="Ваше имя..." required>
 						</div>
 						<div class="mb-3">
 							<label for="emailInput" class="form-label">Email</label>
 							<input type="email" name="email"
-							class="form-control" id="emailInput" placeholder="testmail@gmail.com">
+							class="form-control" id="emailInput" placeholder="testmail@gmail.com" required>
 						</div>
 						<div class="mb-3">
 							<label for="descriptionInput" class="form-label">Описание...</label>
 							<textarea name="text" class="form-control" rows="6" id="descriptionInput"
-							placeholder="Опишите с каким запросом вы обращаетесь..."></textarea>
+							placeholder="Опишите с каким запросом вы обращаетесь..." required></textarea>
 						</div>
 						<div class="mb-3">
 							<button type="submit" class="btn btn-primary">Отправить</button>
