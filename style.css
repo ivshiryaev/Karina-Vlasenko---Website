@@ -10899,20 +10899,18 @@ section .myImageHolder {
 }
 
 .divider {
-  position: relative;
-  border: none;
-  border-radius: 10px;
+  transform: translateY(2px);
 }
 .divider svg {
-  position: relative;
-  top: 2px;
   width: 100%;
   height: auto;
+  fill: #227E67;
   shape-rendering: geometricPrecision;
+  transition: 0.2s;
 }
 
 .divider.reverted {
-  transform: scale(1, -1);
+  transform: scale(1, -1) translateY(2px);
 }
 
 .loaderWrapper {
@@ -11248,6 +11246,10 @@ section {
   text-align: center;
 }
 
+.onlyOnMobile {
+  display: block;
+}
+
 #header {
   display: none;
 }
@@ -11257,6 +11259,9 @@ section {
 }
 
 @media (min-width: 768px) {
+  .onlyOnMobile {
+    display: none;
+  }
   section {
     text-align: start;
   }

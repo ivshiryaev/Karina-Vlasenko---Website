@@ -182,21 +182,21 @@ section{
 
 
 .divider{
-	position: relative;
-	border:none;
-	border-radius:10px;
-
+	transform: translateY(2px);
 	svg{
-		position: relative;
-		top: 2px;
 		width: 100%;
 		height: auto;
+		fill:#227E67;
 		shape-rendering: geometricPrecision;
+		transition:0.2s;
 	}
 }
-
+.divider:hover{
+	svg{
+	}
+}
 .divider.reverted{
-	transform: scale(1,-1);
+	transform: scale(1,-1) translateY(2px);
 }
 
 
@@ -608,6 +608,10 @@ section{
 	text-align: center;
 }
 
+.onlyOnMobile{
+	display:block;
+}
+
 #header{
 	display:none;
 }
@@ -626,6 +630,9 @@ section{
 
 
 @include media-breakpoint-up(md) {
+	.onlyOnMobile{
+		display: none;
+	}
 	section{
 		text-align: start;
 	}

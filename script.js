@@ -11,6 +11,8 @@ let closeIconClassName = "fa-xmark";
 
 const form = document.getElementById('form');
 
+const karinaPhoneNumber = '+48500396561';
+
 form.addEventListener('submit', function(e) {
     e.preventDefault(); // prevent the form from submitting normally
 
@@ -99,7 +101,7 @@ mail.addEventListener('click',function(){
 
 //Copy Phone
 phoneNumber.addEventListener('click',function(){
-	copyToClipboard(this.innerHTML);
+	copyToClipboard(karinaPhoneNumber);
 });
 
 
