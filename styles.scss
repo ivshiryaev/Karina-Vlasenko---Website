@@ -63,6 +63,18 @@ section{
 		align-items: center;
 	}
 }
+.myImageHolder{
+	img{
+		transition:all 1s;
+	}
+}
+.myImageHolder:hover{
+	img{
+		transform:scale(1.05);
+		transition:all 0.5s;
+
+	}
+}
 
 
 
@@ -182,6 +194,8 @@ section{
 
 
 .divider{
+	position: relative;
+	z-index:-1;
 	transform: translateY(2px);
 	svg{
 		width: 100%;
@@ -363,12 +377,15 @@ section{
 		transform:translateY(-10px);
 		box-shadow: 0px 0px 20px $secondary;
 		transition: all $startAnimation;
+		background-color: transparent;
 
 		cursor:pointer;
 	}
 	.zapros:active{
 		transform:translate(0px);
 		box-shadow:none;
+		background-color: $secondary;
+		color:black;
 	}
 }
 
@@ -605,6 +622,7 @@ section{
 
 //standard values for 0px screen
 section{
+	position: relative;
 	text-align: center;
 }
 
@@ -621,7 +639,13 @@ section{
 		margin-bottom: 50px;
 	}
 }
-
+.right50{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:50%;
+	margin-top:auto;
+}
 
 
 //change if bigger than 
@@ -651,9 +675,66 @@ section{
 			margin-bottom: 0px;
 		}
 	}
+	.right50{
+		position:absolute;
+		right:0;
+		margin-left:auto;
+		width:50%;
+		height:100%;
+	}
 }
 
 //If screen is bigger than ($value) do something
 @include media-breakpoint-up(lg) {
 	
+}
+
+
+
+
+
+//Background svg
+.backgroundWrapper{
+	pointer-events: none;
+	top:0px;
+	left:0px;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.svgWrapper{
+	width:100%;
+	height:100%;
+
+	padding:20px;
+
+	svg{
+		width:100%;
+		height:100%;
+		fill:none;
+		stroke:black;
+		stroke-width:2px;
+
+		path{
+		stroke-dasharray: 2500;
+		stroke-dashoffset: 2500;
+		animation:svgDrawing1 5s linear infinite alternate;
+		}
+	}
+}
+
+@keyframes svgDrawing1{
+	0%{
+		stroke-dashoffset: 2500;
+	}
+	20%{
+		stroke-dashoffset: 2500;
+	}
+	80%{
+		stroke-dashoffset: 0;
+	}
+	100%{
+		stroke-dashoffset: 0;
+	}
 }
