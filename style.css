@@ -10796,6 +10796,8 @@ h4, .h4 {
 }
 
 section {
+  position: relative;
+  z-index: 0;
   padding: 3.5rem 0px;
 }
 section .row > div {
@@ -10817,6 +10819,7 @@ section .myImageHolder {
 }
 
 .btn {
+  transition: all 0.5s;
   font-size: 16px;
   color: white;
   padding: 10px 20px;
@@ -10827,8 +10830,10 @@ section .myImageHolder {
 }
 
 .btn:hover {
+  transition: 0.2s;
   background-color: #66D9BC;
   box-shadow: 0px 0px 20px #348c76;
+  transform: scale(1.05);
 }
 
 .btn-primary {
@@ -11010,6 +11015,9 @@ section .myImageHolder {
   justify-content: center;
   align-items: center;
   min-height: calc(300px + 15rem);
+}
+#hero .buttons button:first-child {
+  margin-right: 10px;
 }
 
 #about {
@@ -11200,6 +11208,7 @@ section .myImageHolder {
   text-align: center;
   width: 100%;
   z-index: 100;
+  font-size: 14px;
   padding: 10px 0px;
   margin: 0px;
 }
@@ -11281,6 +11290,14 @@ section {
   margin-top: auto;
 }
 
+.left50 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  margin-bottom: auto;
+}
+
 @media (min-width: 768px) {
   .onlyOnMobile {
     display: none;
@@ -11307,8 +11324,16 @@ section {
     width: 50%;
     height: 100%;
   }
+  .left50 {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    margin-right: auto;
+  }
 }
 .backgroundWrapper {
+  z-index: -1;
   pointer-events: none;
   top: 0px;
   left: 0px;
@@ -11326,27 +11351,60 @@ section {
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: black;
-  stroke-width: 2px;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 1px;
 }
 .svgWrapper svg path {
   stroke-dasharray: 2500;
   stroke-dashoffset: 2500;
-  animation: svgDrawing1 5s linear infinite alternate;
+  animation: svgDrawing1 5s ease-in-out infinite alternate;
+}
+
+#svg-1 {
+  stroke-width: 5px;
+}
+
+#svg2 {
+  stroke-width: 1px;
+}
+
+#svg3 path {
+  stroke-width: 1px;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: svgDrawing3 5s ease-in-out infinite alternate;
 }
 
 @keyframes svgDrawing1 {
   0% {
     stroke-dashoffset: 2500;
+    stroke: rgba(255, 255, 255, 0.5);
   }
-  20% {
+  10% {
     stroke-dashoffset: 2500;
   }
-  80% {
+  90% {
     stroke-dashoffset: 0;
   }
   100% {
     stroke-dashoffset: 0;
+    stroke: inherit;
+  }
+}
+@keyframes svgDrawing3 {
+  0% {
+    stroke-dashoffset: 5000;
+    stroke: rgba(255, 255, 255, 0.5);
+  }
+  10% {
+    stroke-dashoffset: 5000;
+  }
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: inherit;
   }
 }
 
